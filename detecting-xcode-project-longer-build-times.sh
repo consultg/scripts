@@ -1,0 +1,1 @@
+xcodebuild -project SomeProject.xcodeproj -arch arm64 -sdk iphonesimulator -scheme ProjectScheme clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" > BuildLog.txt && grep -E "[1-9]+\.[0-9]+ms" ./BuildLog.txt > FilesThatNeedPerformanceOptimization.txt
